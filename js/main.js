@@ -17,7 +17,37 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initMobileMenu();
     initActiveNavLink();
+    initServicesAccordion();
 });
+
+// ===== SERVICES ACCORDION =====
+function initServicesAccordion() {
+    const items = document.querySelectorAll('.svc-item');
+    items.forEach(item => {
+        const header = item.querySelector('.svc-header');
+        if (!header) return;
+        header.addEventListener('click', () => {
+            const isOpen = item.classList.contains('is-open');
+            // Close all
+            items.forEach(i => {
+                i.classList.remove('is-open');
+                const btn = i.querySelector('.svc-header');
+                if (btn) btn.setAttribute('aria-expanded', 'false');
+            });
+            // Open clicked if it was closed
+            if (!isOpen) {
+                item.classList.add('is-open');
+                header.setAttribute('aria-expanded', 'true');
+                // Scroll into view smoothly
+                setTimeout(() => {
+                    item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 50);
+            }
+        });
+    });
+}
+
+
 
 // ===== NAVBAR SCROLL EFFECT =====
 function initNavbar() {
