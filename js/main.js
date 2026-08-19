@@ -1,5 +1,5 @@
 /* =========================================
-   HOLA AMIGOS — GSAP Animations & Interactions
+   HOLA AMIGOS - GSAP Animations & Interactions
    ========================================= */
 
 // Register GSAP plugins
@@ -141,7 +141,7 @@ function initScrollReveals() {
         });
     });
 
-    // Service cards — special stagger
+    // Service cards - special stagger
     gsap.to('.service-card', {
         opacity: 1,
         y: 0,
@@ -155,7 +155,7 @@ function initScrollReveals() {
         },
     });
 
-    // Trek cards — stagger from different directions
+    // Trek cards - stagger from different directions
     gsap.to('.trek-card', {
         opacity: 1,
         y: 0,
@@ -172,7 +172,7 @@ function initScrollReveals() {
         },
     });
 
-    // Trek tags — stagger in
+    // Trek tags - stagger in
     gsap.to('.trek-tag', {
         opacity: 1,
         y: 0,
@@ -186,7 +186,7 @@ function initScrollReveals() {
         },
     });
 
-    // Timeline items — alternate slide
+    // Timeline items - alternate slide
     document.querySelectorAll('.timeline-item').forEach((item, i) => {
         const fromX = item.classList.contains('timeline-left') ? -60 : 60;
         gsap.fromTo(item.querySelector('.timeline-content'), {
@@ -477,3 +477,4 @@ function initActiveNavLink() {
         });
     });
 }
+

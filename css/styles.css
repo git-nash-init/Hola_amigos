@@ -1,10 +1,10 @@
 /* =========================================
-   HOLA AMIGOS — Design System & Styles
+   HOLA AMIGOS - Design System & Styles
    ========================================= */
 
 /* ===== CSS Custom Properties ===== */
 :root {
-    /* Primary Colors — Mountain/Adventure Theme */
+    /* Primary Colors - Mountain/Adventure Theme */
     --green-900: #0a2e1a;
     --green-800: #0d4a2b;
     --green-700: #116b3e;
@@ -16,7 +16,7 @@
     --green-100: #d4f5e4;
     --green-50: #eefbf4;
 
-    /* Accent — Amber/Gold */
+    /* Accent - Amber/Gold */
     --amber-500: #fbbf33;
     --amber-400: #fcd054;
     --amber-300: #fde088;
@@ -2030,7 +2030,7 @@ ul { list-style: none; }
 /* ===== CLIENT IMAGE OPTIMIZATIONS ===== */
 /* Fine-tune focal points for real client photos */
 
-/* Service cards — portrait photos used in landscape containers */
+/* Service cards - portrait photos used in landscape containers */
 #service-treks .service-card-img img {
     object-position: center 30%;
 }
@@ -2047,7 +2047,7 @@ ul { list-style: none; }
     object-position: center center;
 }
 
-/* Trek Cards — optimize focal points */
+/* Trek Cards - optimize focal points */
 #trek-kalsubai img {
     object-position: center 40%;
 }
@@ -2060,12 +2060,12 @@ ul { list-style: none; }
     object-position: center 30%;
 }
 
-/* About Section portrait — show face prominently */
+/* About Section portrait - show face prominently */
 .about-image-wrapper img {
     object-position: center 15%;
 }
 
-/* Parallax — wide mountain panorama */
+/* Parallax - wide mountain panorama */
 .parallax-bg img {
     object-position: center 60%;
 }
@@ -2186,7 +2186,7 @@ ul { list-style: none; }
     letter-spacing: 0.03em;
 }
 
-/* Gallery focal points — ensure faces stay visible */
+/* Gallery focal points - ensure faces stay visible */
 #trek-garbett img,
 .gallery-item:nth-child(1) img { object-position: center 35%; }
 .gallery-item:nth-child(2) img { object-position: center 25%; }  /* jungle/Snehal face */
@@ -2465,7 +2465,7 @@ ul { list-style: none; }
     line-height: 1.6;
 }
 
-/* ===== RESPONSIVE — Services Accordion ===== */
+/* ===== RESPONSIVE - Services Accordion ===== */
 @media (max-width: 992px) {
     .svc-body-inner {
         grid-template-columns: 1fr;
@@ -2636,3 +2636,4 @@ ul { list-style: none; }
     .svc-cards-grid { grid-template-columns: 1fr; gap: 18px; }
     .svc-card-img { height: 180px; }
 }
+
