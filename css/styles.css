@@ -971,8 +971,11 @@ ul { list-style: none; }
 
 .about-image-wrapper img {
     width: 100%;
-    height: 500px;
-    object-fit: cover;
+    height: auto;
+    min-height: 400px;
+    object-fit: contain;
+    object-position: center top;
+    background: var(--green-50);
 }
 
 .about-image-frame {
@@ -1897,7 +1900,7 @@ ul { list-style: none; }
         gap: 40px;
     }
 
-    .about-image-wrapper img { height: 400px; }
+    .about-image-wrapper img { min-height: 350px; }
 
     .contact-grid {
         grid-template-columns: 1fr;
@@ -2022,7 +2025,7 @@ ul { list-style: none; }
     .container { padding: 0 16px; }
 
     .about-badges { flex-direction: column; }
-    .about-image-wrapper img { height: 300px; }
+    .about-image-wrapper img { min-height: 280px; }
 
     .contact-form-wrapper { padding: 24px; }
 }
@@ -2068,9 +2071,9 @@ ul { list-style: none; }
     object-position: center 60%;
 }
 
-/* About Section portrait - show face prominently */
+/* About Section portrait - show full image */
 .about-image-wrapper img {
-    object-position: center 15%;
+    object-position: center top;
 }
 
 /* Parallax - wide mountain panorama */
@@ -2091,13 +2094,13 @@ ul { list-style: none; }
     }
 
     .about-image-wrapper img {
-        object-position: center 10%;
+        object-position: center top;
     }
 }
 
 @media (max-width: 576px) {
     .about-image-wrapper img {
-        object-position: center 12%;
+        object-position: center top;
     }
 
     .service-card-img { height: 200px; }
