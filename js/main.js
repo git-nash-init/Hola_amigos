@@ -98,6 +98,11 @@ function initHeroAnimations() {
         y: 0,
         duration: 0.7,
     }, '-=0.3')
+    .to('.hero-instagram-connect', {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+    }, '-=0.3')
     .to('.hero-stat', {
         opacity: 1,
         y: 0,

@@ -511,6 +511,83 @@ ul { list-style: none; }
     z-index: 10;
 }
 
+/* Hero Instagram Connect Pill */
+.hero-instagram-connect {
+    margin-top: 24px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-instagram-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 22px 10px 14px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    border-radius: var(--radius-full);
+    color: var(--white);
+    text-decoration: none;
+    font-size: var(--text-base);
+    font-family: var(--font-heading);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    transition: all var(--transition-base);
+}
+
+.hero-instagram-pill:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 36px rgba(225, 48, 108, 0.4);
+    color: var(--white);
+}
+
+.hero-instagram-pill .ig-icon-glow {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #ffffff;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 15px rgba(220, 39, 67, 0.5);
+    transition: transform var(--transition-base);
+    flex-shrink: 0;
+}
+
+.hero-instagram-pill:hover .ig-icon-glow {
+    transform: rotate(12deg) scale(1.1);
+}
+
+.hero-instagram-pill .ig-text {
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 0.3px;
+}
+
+.hero-instagram-pill .ig-text strong {
+    color: var(--amber-400);
+    font-weight: 700;
+}
+
+.hero-instagram-pill .ig-arrow {
+    font-size: var(--text-xs);
+    opacity: 0.75;
+    transition: transform var(--transition-base);
+    margin-left: 2px;
+}
+
+.hero-instagram-pill:hover .ig-arrow {
+    opacity: 1;
+    transform: translate(2px, -2px);
+}
+
 .hero-stats {
     position: relative;
     z-index: 2;
@@ -1810,6 +1887,58 @@ ul { list-style: none; }
     color: rgba(255,255,255,0.4);
 }
 
+/* ===== FLOATING SOCIAL BUTTONS ===== */
+.instagram-float {
+    position: fixed;
+    bottom: 96px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 28px;
+    box-shadow: 0 4px 20px rgba(220, 39, 67, 0.45);
+    z-index: 999;
+    transition: all var(--transition-base);
+    animation: instagramPulse 2.5s infinite;
+}
+
+.instagram-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(220, 39, 67, 0.65);
+    color: var(--white);
+}
+
+.instagram-tooltip {
+    position: absolute;
+    right: 72px;
+    background: var(--charcoal);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-family: var(--font-heading);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transition-base);
+}
+
+.instagram-float:hover .instagram-tooltip {
+    opacity: 1;
+    right: 68px;
+}
+
+@keyframes instagramPulse {
+    0% { box-shadow: 0 4px 20px rgba(220, 39, 67, 0.45); }
+    50% { box-shadow: 0 4px 20px rgba(220, 39, 67, 0.45), 0 0 0 10px rgba(220, 39, 67, 0.15); }
+    100% { box-shadow: 0 4px 20px rgba(220, 39, 67, 0.45); }
+}
+
 /* ===== WHATSAPP FLOATING ===== */
 .whatsapp-float {
     position: fixed;
@@ -2028,6 +2157,32 @@ ul { list-style: none; }
     .about-image-wrapper img { min-height: 280px; }
 
     .contact-form-wrapper { padding: 24px; }
+    
+    .hero-instagram-connect { margin-top: 18px; }
+    .hero-instagram-pill {
+        padding: 8px 16px 8px 10px;
+        font-size: var(--text-sm);
+        gap: 10px;
+    }
+    .hero-instagram-pill .ig-icon-glow {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    .instagram-float {
+        bottom: 84px;
+        right: 18px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+    .whatsapp-float {
+        bottom: 20px;
+        right: 18px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
 }
 
 /* ===== CLIENT IMAGE OPTIMIZATIONS ===== */
